@@ -1,0 +1,27 @@
+{
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build"
+    },
+    "devDependencies": {
+        "@event-calendar/core": "^3.2.1",
+        "@event-calendar/day-grid": "^3.2.1",
+        "@event-calendar/list": "^3.2.2",
+        "@event-calendar/resource-time-grid": "^3.2.2",
+        "@event-calendar/resource-timeline": "^3.2.2",
+        "@event-calendar/time-grid": "^3.2.1",
+        "@tailwindcss/forms": "^0.5.2",
+        "alpinejs": "^3.4.2",
+        "autoprefixer": "^10.4.2",
+        "axios": "^1.1.2",
+        "laravel-vite-plugin": "^0.8.0",
+        "postcss": "^8.4.6",
+        "tailwindcss": "^3.4.10",
+        "vite": "^4.5.1"
+    },
+    "dependencies": {
+        "sweetalert2": "^11.10.1"
+    }
+}

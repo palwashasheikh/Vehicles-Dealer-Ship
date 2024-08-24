@@ -1,0 +1,36 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     */
+    public function up(): void
+    {
+        Schema::create('salespersons', function (Blueprint $table) {
+            $table->id();
+    $table->unsignedBigInteger('user_id');
+    $table->unsignedBigInteger('dealership_id');
+    $table->string('fg_color')->nullable();
+    $table->string('bg_color')->nullable();
+    $table->enum('status', ['active', 'inactive'])->default('active');
+    $table->timestamps();
+
+    // Foreign key constraints
+    $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+    // $table->foreign('dealership_id')->references('id')->on('Dealership')->onDelete('cascade');
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::dropIfExists('salespersons');
+    }
+};
